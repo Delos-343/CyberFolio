@@ -6,7 +6,11 @@ import SkillsSection from '@/components/organisms/skills-section';
 import ProjectsSection from '@/components/organisms/projects-section';
 import { ContactSection } from '@/components/organisms/contact-section';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function HomePage() {
+  
   const projects = await prisma.project.findMany({
     where: { visible: true },
     orderBy: [{ sortOrder: 'asc' }, { createdAt: 'desc' }],

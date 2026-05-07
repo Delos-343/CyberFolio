@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma';
 import { parseProjectFormData } from '@/lib/project-upload';
 import { requireAdminSession } from '@/lib/require-admin';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 export async function GET() {
   const session = await requireAdminSession();
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

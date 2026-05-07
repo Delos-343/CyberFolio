@@ -30,18 +30,27 @@ export function Hero() {
             </AnchorButton>
           </div>
 
-          <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3 text-center">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 xl:grid-cols-3">
             {highlights.map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200 backdrop-blur-md">
+              <div
+                key={item}
+                className="
+                  flex w-full items-center justify-center
+                  rounded-full border border-white/10
+                  bg-white/5 px-3 py-3
+                  text-center text-sm text-slate-200
+                  backdrop-blur-md
+                  sm:min-h-[unset]
+                "
+              >
                 {item}
               </div>
             ))}
           </div>
-          <SocialLinks />
         </div>
 
-        <div className="relative m-auto lg:ml-8">
-          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_40%),radial-gradient(circle_at_bottom,rgba(217,70,239,0.14),transparent_35%)] blur-xl" />
+        <div className="relative m-auto md:my-8">
+          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_40%),radial-gradient(circle_at_bottom,rgba(217,70,239,0.14),transparent_35%)] blur-xl motion-safe:animate-pulse" />
           <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-5 shadow-neon backdrop-blur-xl md:p-6">
             <div className="mb-4 flex items-center justify-between gap-3 text-xs text-slate-300 text-center">
               <span className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-cyan-100">

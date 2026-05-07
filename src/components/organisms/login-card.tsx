@@ -11,8 +11,14 @@ export function LoginCard() {
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-100">
           <ShieldCheck className="h-6 w-6" />
         </div>
-        <h1 className="text-2xl font-semibold text-white">Fachry Dwi Handoko admin login</h1>
-        <p className="mt-3 text-sm leading-7 text-slate-300">Only the GitHub account on the allowlist can enter. No other login providers are enabled.</p>
+        <h1 className="text-2xl font-semibold text-white">
+          GitHub OAuth.
+        </h1>
+        <p className="mt-3 text-sm leading-10 text-slate-300">
+          Only the GitHub account on the allow-list can enter.
+          <br />
+          No other login providers are enabled.
+        </p>
         <div className="mt-6">
           <Button type="button" onClick={() => signIn('github', { callbackUrl: '/admin' })} className="w-full">
             <Github className="h-4 w-4" /> Continue with GitHub

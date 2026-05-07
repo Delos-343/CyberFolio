@@ -18,21 +18,6 @@ const projects = [
     featured: true,
     visible: true,
   },
-  {
-    title: 'AI Support Desk',
-    slug: 'ai-support-desk',
-    summary: 'Ticket triage workspace with smart routing and response templates.',
-    description:
-      'Designed to surface critical tickets quickly while keeping the operator interface compact, responsive, and accessible.',
-    repoUrl: 'https://github.com/yourname/ai-support-desk',
-    liveUrl: 'https://example.com',
-    coverImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
-    stack: ['React', 'Next.js', 'PostgreSQL', 'Framer Motion'],
-    impact: 'Reduced cognitive load for high-volume support operations.',
-    sortOrder: 2,
-    featured: true,
-    visible: true,
-  },
 ];
 
 async function main() {

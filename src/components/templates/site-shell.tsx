@@ -9,7 +9,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <div className="relative z-10">
         <Nav />
         <main>{children}</main>
-        <footer className="mx-auto max-w-6xl px-4 py-8 text-xs text-slate-400 md:px-6">Built with Next.js, TypeScript, Tailwind CSS, PostgreSQL, and GitHub-only admin access.</footer>
+        <footer className="mx-auto max-w-6xl px-4 py-8 text-xs text-slate-400 md:px-6">
+          Built with Next.js, Tailwind, Prisma, Docker, and native GitHub OAuth.
+        </footer>
       </div>
       <TopButton />
     </div>

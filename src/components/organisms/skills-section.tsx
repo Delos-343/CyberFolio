@@ -9,9 +9,9 @@ function SkillsSection() {
           <SectionHeading
             eyebrow="Core stack"
             title="Spare parts, no extra bulk."
-            description="All my project structures stay easy to extend with atomic design, while keeping the application itself lightweight, future-proof, and maintainable."
+            description="All my project structures stay easy to extend with atomic design, while keeping the application data itself lightweight, future-proof, and maintainable."
           />
-          <div className="mt-6 flex flex-wrap gap-2.5 text-center">
+          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap">
             {skills.map((skill) => (
               <SkillPill key={skill}>{skill}</SkillPill>
             ))}

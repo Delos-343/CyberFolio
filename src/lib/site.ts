@@ -1,5 +1,6 @@
 export const site = {
   name: 'Fachry Dwi Handoko',
+  nickname:'FDH',
   tagline: 'My modern personal portfolio.',
   description:
     'A focused personal portfolio for a select set of top deployed projects and a lightweight presentation layer.',
@@ -11,12 +12,13 @@ export const site = {
 
 export const skills = [
   'Next.js (TypeScript)',
-  'React',
+  'React + Vite',
   'Tailwind',
   'Supabase',
   'Prisma',
   'Firebase',
   'Figma',
+  'M365'
 ];
 
 export const highlights = [

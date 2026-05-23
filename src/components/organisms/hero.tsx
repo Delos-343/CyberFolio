@@ -21,11 +21,14 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <AnchorButton href="#projects">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <AnchorButton href="#projects" className="w-full justify-center sm:w-auto">
               View Projects <ArrowRight className="h-4 w-4" />
             </AnchorButton>
-            <AnchorButton href="#contact" className="border-fuchsia-400/30 bg-fuchsia-500/10 text-fuchsia-100 hover:bg-fuchsia-500/20">
+            <AnchorButton
+              href="#contact"
+              className="w-full justify-center border-fuchsia-400/30 bg-fuchsia-500/10 text-fuchsia-100 hover:bg-fuchsia-500/20 sm:w-auto"
+            >
               Contact Me
             </AnchorButton>
           </div>

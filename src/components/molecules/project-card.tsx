@@ -52,13 +52,20 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {project.impact ? <p className="line-clamp-3 rounded-2xl border border-cyan-300/15 bg-cyan-300/5 p-3 text-xs leading-6 text-cyan-50/90">{project.impact}</p> : null}
-
-        <div className="mt-auto flex flex-wrap gap-3 pt-1.5 text-sm">
-          <Link href={project.repoUrl} target="_blank" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-slate-100 transition duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cyan-300/40 hover:text-cyan-100">
+        <div className="mt-auto flex w-full gap-3 pt-1.5 text-sm">
+          <Link
+            href={project.repoUrl}
+            target="_blank"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-slate-100 transition duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-cyan-300/40 hover:text-cyan-100"
+          >
             <Github className="h-4 w-4" /> Repository
           </Link>
           {project.liveUrl ? (
-            <Link href={project.liveUrl} target="_blank" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-slate-100 transition duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-fuchsia-300/40 hover:text-fuchsia-100">
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-slate-100 transition duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-fuchsia-300/40 hover:text-fuchsia-100"
+            >
               <ExternalLink className="h-4 w-4" /> Live Demo
             </Link>
           ) : null}

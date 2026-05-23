@@ -10,7 +10,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <Nav />
         <main>{children}</main>
         <footer className="mx-auto max-w-6xl px-4 py-8 text-xs text-slate-400 md:px-6">
-          Built with Next.js, Tailwind, Supabase, Docker, and GitHub OAuth.
+          Built with Next.js (TypeScript), Tailwind, Supabase, Docker, and GitHub OAuth.
         </footer>
       </div>
       <TopButton />

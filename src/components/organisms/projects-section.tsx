@@ -3,7 +3,13 @@ import { ProjectCard } from '@/components/molecules/project-card';
 import type { Project } from '@/lib/project-types';
 import type { CSSProperties } from 'react';
 
-export default function ProjectsSection({ projects }: { projects: Project[] }) {
+export default function ProjectsSection({
+  projects,
+  failed = false,
+}: {
+  projects: Project[];
+  failed?: boolean;
+}) {
   return (
     <section id="projects" className="mx-auto max-w-6xl scroll-mt-28 px-4 py-12 md:px-6 md:py-14 lg:px-8">
         <div className="space-y-12">
@@ -23,6 +29,8 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
                   <ProjectCard project={project} index={index} />
                 </div>
               ))
+            ) : failed ? (
+              <div className="rounded-[1.75rem] border border-amber-300/20 bg-amber-400/5 p-5 text-amber-100/90">Projects couldn&apos;t be loaded right now. Please check back in a moment.</div>
             ) : (
               <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-5 text-slate-300">No projects have been published yet. Sign in as admin and add the first project.</div>
             )}

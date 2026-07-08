@@ -1,4 +1,5 @@
 import { listProjects } from '@/lib/supabase';
+import type { Project } from '@/lib/project-types';
 import { SiteShell } from '@/components/templates/site-shell';
 import { Hero } from '@/components/organisms/hero';
 import AboutSection from '@/components/organisms/about-section';
@@ -14,14 +15,26 @@ export default async function HomePage() {
 
   noStore();
 
-  const projects = await listProjects({ visibleOnly: true, limit: 10 });
+  // Never let a projects-fetch failure (e.g. missing Supabase env vars or a
+  // transient network/database error) crash the entire page render. The rest of
+  // the portfolio is static and should always be shown; the projects grid
+  // degrades to a friendly notice instead of a 500.
+  let projects: Project[] = [];
+  let projectsFailed = false;
+
+  try {
+    projects = await listProjects({ visibleOnly: true, limit: 10 });
+  } catch (error) {
+    console.error('[HomePage] Failed to load projects from Supabase:', error);
+    projectsFailed = true;
+  }
 
   return (
     <SiteShell>
       <Hero />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection projects={projects} failed={projectsFailed} />
       <ContactSection />
     </SiteShell>
   );
